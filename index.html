@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAKPOVI Victorine Emmanuella | Portfolio Mécatronique</title>
+    <meta name="description" content="Portfolio de CAKPOVI Victorine Emmanuella - Étudiante en Génie Mécanique, passionnée de Mécatronique">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ═══ NAVIGATION ═══ -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">VE.CAKPOVI</div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">A propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#objective">Objectif</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="home">
+        <canvas id="particles-canvas"></canvas>
+        <div class="hero-orb-2"></div>
+
+        <div class="hero-content">
+            <div class="hero-profile">
+                <img src="profile.png" alt="CAKPOVI Victorine Emmanuella">
+            </div>
+            <h1>CAKPOVI Victorine Emmanuella</h1>
+            <p class="hero-subtitle">
+                <span class="hero-typed" id="typed-text"></span>
+            </p>
+            <p class="hero-tagline">Concevoir des systèmes intelligents en combinant mécanique, électronique et automatisation.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-outline">Me contacter</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>A propos</h2>
+                <p>Découvrez mon parcours et ma passion</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal">
+                    <img src="profile1.png" alt="Victorine Emmanuella en contexte académique">
+                </div>
+                <div class="about-text reveal">
+                    <p>Je suis étudiante en deuxième année de <strong>Génie Mécanique</strong>, passionnée par la mécatronique et les systèmes automatisés intelligents. Je m'intéresse à la conception mécanique, à la robotique et à l'intégration de composants électroniques dans des systèmes fonctionnels.</p>
+                    <p>Je développe mes compétences à travers la <strong>modélisation 3D</strong>, l'analyse de systèmes mécaniques et l'étude des technologies d'automatisation.</p>
+                    <p>Mon objectif est de devenir <strong>ingénieure en mécatronique</strong> et de contribuer à l'innovation technologique industrielle.</p>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Année d'études</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Projets réalisés</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Domaines maîtrisés</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Compétences Techniques</h2>
+                <p>Les domaines dans lesquels je me spécialise</p>
+            </div>
+
+            <div class="skills-hex-grid">
+                <div class="skill-hex reveal">
+                    <div class="skill-hex-icon">&#128295;</div>
+                    <h3>Conception & CAO</h3>
+                    <ul>
+                        <li>Modélisation 3D</li>
+                        <li>Assemblages mécaniques</li>
+                        <li>Dessin technique</li>
+                    </ul>
+                </div>
+                <div class="skill-hex reveal">
+                    <div class="skill-hex-icon">&#9881;&#65039;</div>
+                    <h3>Mécanique</h3>
+                    <ul>
+                        <li>Résistance des matériaux</li>
+                        <li>Cinématique</li>
+                        <li>Transmission de mouvement</li>
+                    </ul>
+                </div>
+                <div class="skill-hex reveal">
+                    <div class="skill-hex-icon">&#129302;</div>
+                    <h3>Mécatronique</h3>
+                    <ul>
+                        <li>Capteurs et actionneurs</li>
+                        <li>Systèmes automatisés</li>
+                        <li>Intégration électromécanique</li>
+                    </ul>
+                </div>
+                <div class="skill-hex reveal">
+                    <div class="skill-hex-icon">&#128187;</div>
+                    <h3>Informatique Technique</h3>
+                    <ul>
+                        <li>Simulation</li>
+                        <li>Outils d'ingénierie</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PROJECTS — TIMELINE ═══ -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Projets</h2>
+                <p>Mes réalisations académiques et techniques</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-img">
+                            <img src="gear3d.png" alt="Modélisation 3D d'engrenage">
+                        </div>
+                        <div class="timeline-card-body">
+                            <h3>Modélisation 3D d'un système mécanique</h3>
+                            <p>Conception complète d'un mécanisme en CAO avec simulation du mouvement. Modélisation d'engrenage avec précision des dimensions et des tolérances.</p>
+                            <span class="timeline-tag">CAO</span>
+                            <span class="timeline-tag">3D</span>
+                            <span class="timeline-tag">Simulation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-img">
+                            <img src="project1.jpeg" alt="Système mécatronique">
+                        </div>
+                        <div class="timeline-card-body">
+                            <h3>Analyse d'un système mécatronique</h3>
+                            <p>Étude du fonctionnement d'un système combinant mécanique, électronique et contrôle. Travaux pratiques en automatisation et montage de circuits.</p>
+                            <span class="timeline-tag">Mécatronique</span>
+                            <span class="timeline-tag">Électronique</span>
+                            <span class="timeline-tag">Automatisation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-img">
+                            <img src="projet2.jpeg" alt="Travaux pratiques atelier">
+                        </div>
+                        <div class="timeline-card-body">
+                            <h3>Travaux pratiques en atelier mécanique</h3>
+                            <p>Usinage et fabrication de pièces mécaniques sur machine-outil. Maîtrise des techniques de tournage et respect des tolérances dimensionnelles.</p>
+                            <span class="timeline-tag">Usinage</span>
+                            <span class="timeline-tag">Tournage</span>
+                            <span class="timeline-tag">Fabrication</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ GALLERY ═══ -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Galerie Technique</h2>
+                <p>Univers de la mécatronique et de la robotique</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card reveal">
+                    <div class="gallery-icon">&#129470;</div>
+                    <div class="gallery-info">
+                        <h4>Robotique Industrielle</h4>
+                        <p>Bras robotisés et automation</p>
+                    </div>
+                </div>
+                <div class="gallery-card reveal">
+                    <div class="gallery-icon">&#9881;&#65039;</div>
+                    <div class="gallery-info">
+                        <h4>Engrenages Mécaniques</h4>
+                        <p>Transmission et cinématique</p>
+                    </div>
+                </div>
+                <div class="gallery-card reveal">
+                    <div class="gallery-icon">&#128295;</div>
+                    <div class="gallery-info">
+                        <h4>Assemblages 3D</h4>
+                        <p>Modélisation et conception</p>
+                    </div>
+                </div>
+                <div class="gallery-card reveal">
+                    <div class="gallery-icon">&#129302;</div>
+                    <div class="gallery-info">
+                        <h4>Systèmes Automatisés</h4>
+                        <p>Contrôle et programmation</p>
+                    </div>
+                </div>
+                <div class="gallery-card reveal">
+                    <div class="gallery-icon">&#128202;</div>
+                    <div class="gallery-info">
+                        <h4>Schémas Mécatroniques</h4>
+                        <p>Analyse et conception</p>
+                    </div>
+                </div>
+                <div class="gallery-card reveal">
+                    <div class="gallery-icon">&#128300;</div>
+                    <div class="gallery-info">
+                        <h4>Innovation Technologique</h4>
+                        <p>Recherche et développement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ OBJECTIVE ═══ -->
+    <section id="objective">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Objectif Professionnel</h2>
+            </div>
+            <div class="objective-box reveal">
+                <p>Développer une expertise en mécatronique pour concevoir et optimiser des systèmes automatisés innovants dans la robotique et l'industrie intelligente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Contact</h2>
+                <p>N'hésitez pas à me contacter</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-cards reveal">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">&#128100;</div>
+                        <div>
+                            <h4>Nom</h4>
+                            <p>CAKPOVI Victorine Emmanuella</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">&#9993;</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:cakpovivictorine@gmail.com">cakpovivictorine@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">&#128241;</div>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p><a href="tel:+22999981867">99 98 18 67</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form-wrapper reveal" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">ENVOYER</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <div class="footer-logo">VE.CAKPOVI</div>
+        <div class="footer-links">
+            <a href="#home">Accueil</a>
+            <a href="#about">A propos</a>
+            <a href="#skills">Compétences</a>
+            <a href="#projects">Projets</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <a href="#" class="cv-btn">&#128196; Télécharger mon CV</a>
+        <p style="margin-top:1.5rem;">&copy; 2026 CAKPOVI Victorine Emmanuella &mdash; Portfolio Ingénierie Mécatronique</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

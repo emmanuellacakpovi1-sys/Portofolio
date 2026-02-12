@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Read(//c/Users/Clement AGBALENYO/Documents/GitHub/Portofolio/**)",
+      "Bash(powershell -Command:*)"
+    ]
+  }
+}
