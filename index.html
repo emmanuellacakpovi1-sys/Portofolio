@@ -8,7 +8,8 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,23 +32,29 @@
         </div>
     </nav>
 
-    <!-- ═══ HERO ═══ -->
-    <section class="hero" id="home">
+    <!-- ═══ HERO BANNER ═══ -->
+    <section class="hero-banner" id="home">
         <canvas id="particles-canvas"></canvas>
+        <div class="hero-orb-1"></div>
         <div class="hero-orb-2"></div>
 
-        <div class="hero-content">
-            <div class="hero-profile">
-                <img src="portrait.jpg" alt="CAKPOVI Victorine Emmanuella">
+        <div class="banner-content">
+            <div class="banner-text">
+                <span class="banner-badge">Génie Mécanique & Mécatronique</span>
+                <h1>CAKPOVI<br>Victorine Emmanuella</h1>
+                <p class="banner-typed-wrapper">
+                    <span class="hero-typed" id="typed-text"></span>
+                </p>
+                <p class="banner-tagline">Concevoir des systèmes intelligents en combinant mécanique, électronique et automatisation.</p>
+                <div class="banner-buttons">
+                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-outline">Me contacter</a>
+                </div>
             </div>
-            <h1>CAKPOVI Victorine Emmanuella</h1>
-            <p class="hero-subtitle">
-                <span class="hero-typed" id="typed-text"></span>
-            </p>
-            <p class="hero-tagline">Concevoir des systèmes intelligents en combinant mécanique, électronique et automatisation.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-                <a href="#contact" class="btn btn-outline">Me contacter</a>
+            <div class="banner-photo">
+                <div class="banner-photo-frame">
+                    <img src="portrait.jpg" alt="CAKPOVI Victorine Emmanuella">
+                </div>
             </div>
         </div>
 
@@ -103,7 +110,7 @@
 
             <div class="skills-hex-grid">
                 <div class="skill-hex reveal">
-                    <div class="skill-hex-icon">&#128295;</div>
+                    <div class="skill-hex-icon"><i class="fa-solid fa-compass-drafting"></i></div>
                     <h3>Conception & CAO</h3>
                     <ul>
                         <li>Modélisation 3D</li>
@@ -112,7 +119,7 @@
                     </ul>
                 </div>
                 <div class="skill-hex reveal">
-                    <div class="skill-hex-icon">&#9881;&#65039;</div>
+                    <div class="skill-hex-icon"><i class="fa-solid fa-gears"></i></div>
                     <h3>Mécanique</h3>
                     <ul>
                         <li>Résistance des matériaux</li>
@@ -121,7 +128,7 @@
                     </ul>
                 </div>
                 <div class="skill-hex reveal">
-                    <div class="skill-hex-icon">&#129302;</div>
+                    <div class="skill-hex-icon"><i class="fa-solid fa-microchip"></i></div>
                     <h3>Mécatronique</h3>
                     <ul>
                         <li>Capteurs et actionneurs</li>
@@ -130,7 +137,7 @@
                     </ul>
                 </div>
                 <div class="skill-hex reveal">
-                    <div class="skill-hex-icon">&#128187;</div>
+                    <div class="skill-hex-icon"><i class="fa-solid fa-laptop-code"></i></div>
                     <h3>Informatique Technique</h3>
                     <ul>
                         <li>Simulation</li>
@@ -141,7 +148,7 @@
         </div>
     </section>
 
-    <!-- ═══ PROJECTS — TIMELINE ═══ -->
+    <!-- ═══ PROJECTS ═══ -->
     <section id="projects">
         <div class="container">
             <div class="section-header reveal">
@@ -149,51 +156,54 @@
                 <p>Mes réalisations académiques et techniques</p>
             </div>
 
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-card-img">
-                            <img src="gear3d.png" alt="Modélisation 3D d'engrenage" class="pos-center">
+            <div class="projects-grid">
+                <div class="project-3d reveal-3d">
+                    <div class="project-3d-inner">
+                        <div class="project-3d-img">
+                            <img src="gear3d.png" alt="Modélisation 3D d'engrenage">
                         </div>
-                        <div class="timeline-card-body">
+                        <div class="project-3d-body">
                             <h3>Modélisation 3D d'un système mécanique</h3>
                             <p>Conception complète d'un mécanisme en CAO avec simulation du mouvement. Modélisation d'engrenage avec précision des dimensions et des tolérances.</p>
-                            <span class="timeline-tag">CAO</span>
-                            <span class="timeline-tag">3D</span>
-                            <span class="timeline-tag">Simulation</span>
+                            <div class="project-tags">
+                                <span class="project-tag">CAO</span>
+                                <span class="project-tag">3D</span>
+                                <span class="project-tag">Simulation</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-card-img">
+                <div class="project-3d reveal-3d">
+                    <div class="project-3d-inner">
+                        <div class="project-3d-img">
                             <img src="project1.jpeg" alt="Système mécatronique">
                         </div>
-                        <div class="timeline-card-body">
+                        <div class="project-3d-body">
                             <h3>Analyse d'un système mécatronique</h3>
                             <p>Étude du fonctionnement d'un système combinant mécanique, électronique et contrôle. Travaux pratiques en automatisation et montage de circuits.</p>
-                            <span class="timeline-tag">Mécatronique</span>
-                            <span class="timeline-tag">Électronique</span>
-                            <span class="timeline-tag">Automatisation</span>
+                            <div class="project-tags">
+                                <span class="project-tag">Mécatronique</span>
+                                <span class="project-tag">Électronique</span>
+                                <span class="project-tag">Automatisation</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-card-img">
+                <div class="project-3d reveal-3d">
+                    <div class="project-3d-inner">
+                        <div class="project-3d-img">
                             <img src="projet2.jpeg" alt="Travaux pratiques atelier">
                         </div>
-                        <div class="timeline-card-body">
+                        <div class="project-3d-body">
                             <h3>Travaux pratiques en atelier mécanique</h3>
                             <p>Usinage et fabrication de pièces mécaniques sur machine-outil. Maîtrise des techniques de tournage et respect des tolérances dimensionnelles.</p>
-                            <span class="timeline-tag">Usinage</span>
-                            <span class="timeline-tag">Tournage</span>
-                            <span class="timeline-tag">Fabrication</span>
+                            <div class="project-tags">
+                                <span class="project-tag">Usinage</span>
+                                <span class="project-tag">Tournage</span>
+                                <span class="project-tag">Fabrication</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -212,7 +222,6 @@
             <div class="gallery-grid">
                 <div class="gallery-card reveal">
                     <div class="gallery-bg" style="background-image:url('gear3d.png')"></div>
-                    <div class="gallery-icon">&#9881;&#65039;</div>
                     <div class="gallery-info">
                         <h4>Engrenages & CAO</h4>
                         <p>Modélisation 3D et simulation</p>
@@ -220,7 +229,6 @@
                 </div>
                 <div class="gallery-card reveal">
                     <div class="gallery-bg" style="background-image:url('project1.jpeg')"></div>
-                    <div class="gallery-icon">&#129302;</div>
                     <div class="gallery-info">
                         <h4>Mécatronique</h4>
                         <p>Circuits et systèmes automatisés</p>
@@ -228,7 +236,6 @@
                 </div>
                 <div class="gallery-card reveal">
                     <div class="gallery-bg" style="background-image:url('projet2.jpeg')"></div>
-                    <div class="gallery-icon">&#128295;</div>
                     <div class="gallery-info">
                         <h4>Atelier Mécanique</h4>
                         <p>Usinage et fabrication</p>
@@ -236,7 +243,6 @@
                 </div>
                 <div class="gallery-card reveal">
                     <div class="gallery-bg" style="background-image:url('profile1.png')"></div>
-                    <div class="gallery-icon">&#128218;</div>
                     <div class="gallery-info">
                         <h4>Formation Académique</h4>
                         <p>Cours et travaux dirigés</p>
@@ -244,7 +250,6 @@
                 </div>
                 <div class="gallery-card reveal">
                     <div class="gallery-bg" style="background-image:url('portrait.jpg')"></div>
-                    <div class="gallery-icon">&#128161;</div>
                     <div class="gallery-info">
                         <h4>Passion & Motivation</h4>
                         <p>Curiosité et innovation</p>
@@ -252,7 +257,6 @@
                 </div>
                 <div class="gallery-card reveal">
                     <div class="gallery-bg" style="background-image:url('ppp.png')"></div>
-                    <div class="gallery-icon">&#128202;</div>
                     <div class="gallery-info">
                         <h4>Projet Professionnel</h4>
                         <p>Vision et plan de carrière</p>
@@ -282,22 +286,37 @@
                 <p>Ma vision et mon plan de carrière en mécatronique</p>
             </div>
 
-            <div class="ppp-wrapper">
-                <div class="ppp-image reveal" onclick="openLightbox('ppp.png')">
-                    <img src="ppp.png" alt="Projet Personnel et Professionnel - CAKPOVI Victorine Emmanuella">
-                </div>
-                <div class="ppp-text reveal">
+            <div class="ppp-content reveal">
+                <div class="ppp-text">
                     <h3>Mon PPP en bref</h3>
                     <p>Mon projet personnel et professionnel est orienté vers une carrière dans le domaine de la <strong>mécatronique</strong> et de l'ingénierie industrielle. Il reflète ma formation, mes motivations et ma vision à long terme.</p>
-                    <ul class="ppp-highlights">
-                        <li>Conception et interprétation de plans techniques</li>
-                        <li>Analyse des systèmes mécatroniques</li>
-                        <li>Optimisation des flux de production</li>
-                        <li>Notions de Lean manufacturing</li>
-                        <li>Bases de l'automatisation industrielle</li>
-                        <li>Organisation des postes de travail en atelier</li>
-                    </ul>
-                    <a href="ppp.png" download class="ppp-download">&#128196; Voir le PPP complet</a>
+                    <div class="ppp-highlights-grid">
+                        <div class="ppp-highlight-item">
+                            <i class="fa-solid fa-drafting-compass"></i>
+                            <span>Conception et interprétation de plans techniques</span>
+                        </div>
+                        <div class="ppp-highlight-item">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span>Analyse des systèmes mécatroniques</span>
+                        </div>
+                        <div class="ppp-highlight-item">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Optimisation des flux de production</span>
+                        </div>
+                        <div class="ppp-highlight-item">
+                            <i class="fa-solid fa-industry"></i>
+                            <span>Notions de Lean manufacturing</span>
+                        </div>
+                        <div class="ppp-highlight-item">
+                            <i class="fa-solid fa-robot"></i>
+                            <span>Bases de l'automatisation industrielle</span>
+                        </div>
+                        <div class="ppp-highlight-item">
+                            <i class="fa-solid fa-wrench"></i>
+                            <span>Organisation des postes de travail en atelier</span>
+                        </div>
+                    </div>
+                    <a href="PPP.pdf" download class="ppp-download"><i class="fa-solid fa-file-pdf"></i> Télécharger le PPP (PDF)</a>
                 </div>
             </div>
         </div>
@@ -320,21 +339,21 @@
             <div class="contact-grid">
                 <div class="contact-cards reveal">
                     <div class="contact-card">
-                        <div class="contact-card-icon">&#128100;</div>
+                        <div class="contact-card-icon"><i class="fa-solid fa-user"></i></div>
                         <div>
                             <h4>Nom</h4>
                             <p>CAKPOVI Victorine Emmanuella</p>
                         </div>
                     </div>
                     <div class="contact-card">
-                        <div class="contact-card-icon">&#9993;</div>
+                        <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
                         <div>
                             <h4>Email</h4>
                             <p><a href="mailto:cakpovivictorine@gmail.com">cakpovivictorine@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="contact-card">
-                        <div class="contact-card-icon">&#128241;</div>
+                        <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
                         <div>
                             <h4>Téléphone</h4>
                             <p><a href="tel:+22999981867">99 98 18 67</a></p>
@@ -372,7 +391,7 @@
             <a href="#ppp">PPP</a>
             <a href="#contact">Contact</a>
         </div>
-        <a href="ppp.png" download class="cv-btn">&#128196; Télécharger mon PPP</a>
+        <a href="PPP.pdf" download class="cv-btn"><i class="fa-solid fa-file-pdf"></i> Télécharger mon PPP</a>
         <p style="margin-top:1.5rem;">&copy; 2026 CAKPOVI Victorine Emmanuella &mdash; Portfolio Ingénierie Mécatronique</p>
     </footer>
 

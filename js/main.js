@@ -94,6 +94,10 @@ document.querySelectorAll('.reveal').forEach(function (el) {
     revealObserver.observe(el);
 });
 
+document.querySelectorAll('.reveal-3d').forEach(function (el) {
+    revealObserver.observe(el);
+});
+
 /* ── Contact Form ── */
 function handleSubmit(event) {
     event.preventDefault();
