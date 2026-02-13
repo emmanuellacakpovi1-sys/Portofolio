@@ -101,6 +101,25 @@ function handleSubmit(event) {
     event.target.reset();
 }
 
+/* ── Lightbox (PPP) ── */
+function openLightbox(src) {
+    var lightbox = document.getElementById('lightbox');
+    var img = document.getElementById('lightbox-img');
+    img.src = src;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    var lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+});
+
 /* ══════════════════════════════════════════
    PARTICLE ANIMATION (Canvas)
    ══════════════════════════════════════════ */
