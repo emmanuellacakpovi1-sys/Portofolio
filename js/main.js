@@ -151,12 +151,19 @@ document.addEventListener('keydown', function (e) {
         mouse.y = null;
     });
 
+    var colors = [
+        'rgba(233, 30, 140, ',   // pink
+        'rgba(8, 145, 178, ',    // cyan
+        'rgba(249, 168, 212, '   // pink light
+    ];
+
     function Particle() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 0.5;
-        this.vy = (Math.random() - 0.5) * 0.5;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
         this.radius = Math.random() * 2 + 0.5;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
     }
 
     for (var i = 0; i < particleCount; i++) {
@@ -178,7 +185,7 @@ document.addEventListener('keydown', function (e) {
             // Draw particle
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(0, 212, 255, 0.4)';
+            ctx.fillStyle = p.color + '0.3)';
             ctx.fill();
 
             // Draw connections between particles
@@ -188,11 +195,11 @@ document.addEventListener('keydown', function (e) {
                 var dy = p.y - p2.y;
                 var dist = Math.sqrt(dx * dx + dy * dy);
 
-                if (dist < 150) {
+                if (dist < 140) {
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = 'rgba(0, 212, 255, ' + (0.12 - dist / 1500) + ')';
+                    ctx.strokeStyle = 'rgba(233, 30, 140, ' + (0.08 - dist / 2000) + ')';
                     ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }
@@ -204,12 +211,12 @@ document.addEventListener('keydown', function (e) {
                 var dyM = p.y - mouse.y;
                 var distM = Math.sqrt(dxM * dxM + dyM * dyM);
 
-                if (distM < 200) {
+                if (distM < 180) {
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(mouse.x, mouse.y);
-                    ctx.strokeStyle = 'rgba(0, 212, 255, ' + (0.25 - distM / 800) + ')';
-                    ctx.lineWidth = 0.8;
+                    ctx.strokeStyle = 'rgba(8, 145, 178, ' + (0.18 - distM / 1000) + ')';
+                    ctx.lineWidth = 0.7;
                     ctx.stroke();
                 }
             }
