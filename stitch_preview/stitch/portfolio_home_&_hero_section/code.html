@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CAKPOVI Victorine Emmanuella | Portfolio Génie Mécanique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#1152d4",
+                "background-light": "#f6f6f8",
+                "background-dark": "#101622",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .grid-pattern {
+            background-image: linear-gradient(to right, rgba(17, 82, 212, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(17, 82, 212, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(17, 82, 212, 0.15) 0%, transparent 70%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(10px);
+            background-color: rgba(16, 22, 34, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded flex items-center justify-center">
+<span class="text-white font-bold text-xl">V</span>
+</div>
+<span class="text-lg font-bold tracking-tighter uppercase hidden sm:block">Victorine Emmanuella</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#home">Accueil</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#about">À Propos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#skills">Compétences</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#projects">Projets</a>
+<a class="text-sm font-medium px-4 py-2 border border-primary/50 rounded hover:bg-primary/10 transition-all" href="#contact">Contact</a>
+</div>
+<button class="md:hidden text-slate-100">
+<span class="material-icons">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" id="home">
+<!-- Background Elements -->
+<div class="absolute inset-0 grid-pattern opacity-40"></div>
+<div class="absolute inset-0 hero-glow"></div>
+<!-- Animated Elements (Visual only) -->
+<div class="absolute top-1/4 left-10 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-1/4 right-10 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="max-w-4xl mx-auto text-center">
+<!-- Status Tag -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-xs font-semibold tracking-widest uppercase text-primary">Disponible pour opportunités</span>
+</div>
+<!-- Main Heading -->
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-[1.1]">
+<span class="block text-slate-400 font-light text-2xl md:text-3xl mb-2">CAKPOVI</span>
+                    Victorine <span class="text-primary">Emmanuella</span>
+</h1>
+<!-- Subtitle -->
+<p class="text-lg md:text-2xl text-slate-400 mb-10 font-light max-w-2xl mx-auto border-l-2 border-primary/40 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
+                    Étudiante en <span class="text-slate-100 font-medium">Génie Mécanique</span> &amp; 
+                    Passionnée de <span class="text-slate-100 font-medium text-primary">Mécatronique</span>.
+                </p>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="group relative px-8 py-4 bg-primary text-white font-bold rounded-lg overflow-hidden transition-all hover:shadow-[0_0_20px_rgba(17,82,212,0.5)]" href="#projects">
+<span class="relative z-10 flex items-center gap-2">
+                            Voir mes projets
+                            <span class="material-icons text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</span>
+</a>
+<a class="px-8 py-4 border border-slate-700 hover:border-primary/60 hover:bg-slate-800/50 text-slate-300 font-semibold rounded-lg transition-all flex items-center gap-2" href="#cv">
+<span class="material-icons text-sm">download</span>
+                        Télécharger CV
+                    </a>
+</div>
+</div>
+</div>
+<!-- Scroll Down Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+<span class="text-[10px] uppercase tracking-[0.2em]">Découvrir</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+<!-- Left Social Sidebar -->
+<div class="hidden lg:flex flex-col items-center gap-6 absolute left-10 bottom-24 after:content-[''] after:w-[1px] after:h-24 after:bg-slate-700">
+<a class="text-slate-500 hover:text-primary transition-colors transform hover:-translate-y-1" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="text-slate-500 hover:text-primary transition-colors transform hover:-translate-y-1" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+</div>
+</section>
+<!-- Project Quick View Section -->
+<section class="py-24 bg-background-light dark:bg-background-dark/50" id="projects">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="text-primary font-bold tracking-widest text-sm uppercase">Sélection</span>
+<h2 class="text-4xl font-bold mt-2">Mes Projets Récents</h2>
+</div>
+<a class="text-primary hover:underline flex items-center gap-1 font-semibold" href="#">
+                    Tout voir <span class="material-icons text-base">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project Card 1 -->
+<div class="group bg-slate-800/20 border border-slate-700/50 rounded-xl overflow-hidden hover:border-primary/50 transition-all">
+<div class="h-48 overflow-hidden relative">
+<img alt="Robotic arm assembly" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" data-alt="Close up of a metallic robotic arm assembly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6HaYdM2cT76F-AFLDURUl4T4hLMLcT79iebP8gqg2tSaGp5Rtl_ipJgdvCxrX_wlJtSDt0lPcKm7napZlk_T5my_3VNFJLZQ5Y3_sVXBDZY1beR1me8WSoevlPGGmdZx5YZxZcldVaQ8Ps7lruGkU8JBVVwVx4Ew5XOdczB6fXYuqcnz18ZE2IBHKK9a1YyLqjqrPL6ZUxpL-2SRDI5C7ojDAKHO7ClkKvwbDxomvKOT5O31wYpzl-KxMo7qCpcDV-4cAO_LFVb4"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="bg-primary text-white px-4 py-2 rounded text-sm font-bold">Détails</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex gap-2 mb-3">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded">CAD</span>
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded">Automation</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Bras Robotique 4-Axes</h3>
+<p class="text-slate-400 text-sm mb-4">Conception et prototypage d'un bras robotique industriel pour le tri de pièces légères.</p>
+<div class="flex items-center text-xs text-slate-500">
+<span class="material-icons text-sm mr-1">history</span> Juin 2023
+                        </div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group bg-slate-800/20 border border-slate-700/50 rounded-xl overflow-hidden hover:border-primary/50 transition-all">
+<div class="h-48 overflow-hidden relative">
+<img alt="Circuit board with motors" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" data-alt="Electronic circuit board integrated with small mechanical motors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsVJKjowkKotMfX5rkecHHoF_UhcjK47T1QwOrROgjCnC3yD4m6eWovHFFglFHc-RgvxFcb5VAK6s1qqMvT7MYV2K7aQwI7f7CFwm65makEI1cjOGWz7SKyDGFERlsLg9_MQThvPztov1k0IkN49kjbgX7axavjXGLnQnOCbsC9lox77i5Rb5AfvCoYAnwod4JbRK9gz_wGvUMrEQkJ_XJbLMlhz2w3p56_010Q5FafymAXND0G3e-aPGPVERKW67JbWy_Qerc4Ag"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="bg-primary text-white px-4 py-2 rounded text-sm font-bold">Détails</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex gap-2 mb-3">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded">Arduino</span>
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded">Mechatronics</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Système d'Irrigation Intelligent</h3>
+<p class="text-slate-400 text-sm mb-4">Système automatisé avec capteurs d'humidité et pompe pilotée par microcontrôleur.</p>
+<div class="flex items-center text-xs text-slate-500">
+<span class="material-icons text-sm mr-1">history</span> Octobre 2023
+                        </div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group bg-slate-800/20 border border-slate-700/50 rounded-xl overflow-hidden hover:border-primary/50 transition-all">
+<div class="h-48 overflow-hidden relative">
+<img alt="3D model on screen" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" data-alt="Blue technical 3D wireframe model on a professional workstation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAdBY1lE0W3Z8tcVDq2FegzFTUXh5eTvIggRrzTHx5fHoSCfREydlU8YX1qDIRAOfVV4bnwiiLfFZoikwp6tjdqiMRfgwnNHDPpPQv-EpU5PrKpMOCrJ7qGY5SpGuL6uuITUE1dvysAGcj-f0QzFQf86jviKKMCenjxUyaUvU__FH8EHp7BObmHcZa0_GqRoJVRCRYpHvmanXxDzMVBUCMzapAnsCjw_pQk4i1K5Fyt6ePNbC2HMZfEH3KipRwq-wih-3pAWs70rA"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="bg-primary text-white px-4 py-2 rounded text-sm font-bold">Détails</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex gap-2 mb-3">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded">SolidWorks</span>
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded">Analysis</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Optimisation de Turbine</h3>
+<p class="text-slate-400 text-sm mb-4">Analyse de flux et optimisation structurelle d'une micro-turbine hydraulique.</p>
+<div class="flex items-center text-xs text-slate-500">
+<span class="material-icons text-sm mr-1">history</span> Février 2024
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-900 border-t border-slate-800 py-12">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="text-white font-bold text-sm">V</span>
+</div>
+<span class="font-bold tracking-tight uppercase">V.E. CAKPOVI</span>
+</div>
+<p class="text-slate-500 text-sm max-w-xs text-center md:text-left">
+                    Concevoir l'avenir par la synergie de la mécanique et de l'électronique.
+                </p>
+</div>
+<div class="flex gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Navigation</span>
+<a class="text-sm text-slate-500 hover:text-primary" href="#">Accueil</a>
+<a class="text-sm text-slate-500 hover:text-primary" href="#">Projets</a>
+<a class="text-sm text-slate-500 hover:text-primary" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Social</span>
+<a class="text-sm text-slate-500 hover:text-primary" href="#">LinkedIn</a>
+<a class="text-sm text-slate-500 hover:text-primary" href="#">GitHub</a>
+<a class="text-sm text-slate-500 hover:text-primary" href="#">Instagram</a>
+</div>
+</div>
+<div class="text-center md:text-right">
+<p class="text-xs text-slate-600 mb-2">© 2024 VEC. Tous droits réservés.</p>
+<p class="text-xs text-slate-600">Design &amp; Code par Victorine Emmanuella</p>
+</div>
+</div>
+</footer>
+</body></html>

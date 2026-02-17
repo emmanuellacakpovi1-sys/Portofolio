@@ -4,7 +4,9 @@
       "Bash(ls:*)",
       "Read(//c/Users/Clement AGBALENYO/Documents/GitHub/Portofolio/**)",
       "Bash(powershell -Command:*)",
-      "Bash(ren:*)"
+      "Bash(ren:*)",
+      "Bash(git fetch:*)",
+      "Bash(git show:*)"
     ]
   }
 }

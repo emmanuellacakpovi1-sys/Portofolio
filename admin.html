@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Portfolio VEC</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- ══ LOGIN ══ -->
+<div class="login-screen" id="loginScreen">
+    <div class="login-box">
+        <div class="login-logo"><span class="logo-letter">V</span></div>
+        <h1>Administration</h1>
+        <p>Portfolio — CAKPOVI Victorine Emmanuella</p>
+        <form id="loginForm">
+            <div class="field">
+                <label>Mot de passe</label>
+                <input type="password" id="pwInput" placeholder="Entrez le mot de passe" autofocus>
+            </div>
+            <div class="login-error" id="loginError">Mot de passe incorrect.</div>
+            <button type="submit" class="btn-primary full">
+                <span class="material-icons">lock_open</span> Accéder
+            </button>
+        </form>
+        <p class="login-hint">Mot de passe par défaut : <code>ve2026</code></p>
+    </div>
+</div>
+
+<!-- ══ DASHBOARD ══ -->
+<div class="dashboard" id="dashboard" style="display:none">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="logo-mark"><span class="logo-letter">V</span></div>
+            <span>Admin Panel</span>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="nav-item active" data-section="hero">
+                <span class="material-icons">home</span> Accueil / Hero
+            </button>
+            <button class="nav-item" data-section="about">
+                <span class="material-icons">person</span> À Propos
+            </button>
+            <button class="nav-item" data-section="skills">
+                <span class="material-icons">bar_chart</span> Compétences
+            </button>
+            <button class="nav-item" data-section="projects">
+                <span class="material-icons">work</span> Projets
+            </button>
+            <button class="nav-item" data-section="gallery">
+                <span class="material-icons">photo_library</span> Galerie
+            </button>
+            <button class="nav-item" data-section="ppp">
+                <span class="material-icons">description</span> PPP
+            </button>
+            <button class="nav-item" data-section="contact">
+                <span class="material-icons">mail</span> Contact
+            </button>
+            <button class="nav-item" data-section="password">
+                <span class="material-icons">key</span> Mot de passe
+            </button>
+        </nav>
+        <div class="sidebar-actions">
+            <button class="btn-primary full" id="saveAllBtn">
+                <span class="material-icons">save</span> Sauvegarder tout
+            </button>
+            <button class="btn-danger full" id="resetAllBtn">
+                <span class="material-icons">restore</span> Réinitialiser
+            </button>
+            <button class="btn-ghost full" id="previewBtn">
+                <span class="material-icons">open_in_new</span> Voir le site
+            </button>
+            <button class="btn-ghost full" id="logoutBtn">
+                <span class="material-icons">logout</span> Déconnexion
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+        <div class="toast" id="toast"></div>
+
+        <!-- ═ HERO ═ -->
+        <section class="panel active" id="panel-hero">
+            <div class="panel-header">
+                <h2><span class="material-icons">home</span> Section Accueil / Hero</h2>
+                <p>Modifiez les textes et la photo principale affichés sur la page d'accueil.</p>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nom de famille (eyebrow)</label>
+                    <input type="text" id="h_eyebrow" placeholder="CAKPOVI">
+                </div>
+                <div class="form-group">
+                    <label>Prénom</label>
+                    <input type="text" id="h_firstName" placeholder="Victorine">
+                </div>
+                <div class="form-group">
+                    <label>Deuxième prénom (accentué)</label>
+                    <input type="text" id="h_lastName" placeholder="Emmanuella">
+                </div>
+                <div class="form-group">
+                    <label>Texte du badge</label>
+                    <input type="text" id="h_badge" placeholder="Disponible pour opportunités">
+                </div>
+                <div class="form-group full">
+                    <label>Tagline / Description courte</label>
+                    <textarea id="h_tagline" rows="2" placeholder="Concevoir des systèmes intelligents..."></textarea>
+                </div>
+                <div class="form-group full">
+                    <label>Phrases de l'effet machine à écrire (une par ligne)</label>
+                    <textarea id="h_phrases" rows="5" placeholder="Étudiante en Génie Mécanique&#10;Passionnée de Mécatronique&#10;Future Ingénieure en Robotique&#10;Conception & Automatisation"></textarea>
+                    <small>Chaque ligne = une phrase animée</small>
+                </div>
+                <div class="form-group full">
+                    <label>Photo principale (portrait)</label>
+                    <div class="img-uploader" id="heroImgUploader">
+                        <img id="heroImgPreview" src="portrait.jpg" alt="Portrait">
+                        <div class="img-uploader-overlay">
+                            <span class="material-icons">upload</span>
+                            <span>Changer la photo</span>
+                            <input type="file" id="heroImgInput" accept="image/*">
+                        </div>
+                    </div>
+                    <small>Recommandé : photo portrait, min. 400×500px. Cadrage automatique centré.</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═ ABOUT ═ -->
+        <section class="panel" id="panel-about">
+            <div class="panel-header">
+                <h2><span class="material-icons">person</span> Section À Propos</h2>
+                <p>Modifiez votre biographie et les statistiques.</p>
+            </div>
+            <div class="form-grid">
+                <div class="form-group full">
+                    <label>Paragraphe 1</label>
+                    <textarea id="ab_p1" rows="3"></textarea>
+                </div>
+                <div class="form-group full">
+                    <label>Paragraphe 2</label>
+                    <textarea id="ab_p2" rows="3"></textarea>
+                </div>
+                <div class="form-group full">
+                    <label>Paragraphe 3</label>
+                    <textarea id="ab_p3" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Stat 1 — Chiffre</label>
+                    <input type="text" id="ab_s1n" placeholder="2">
+                </div>
+                <div class="form-group">
+                    <label>Stat 1 — Libellé</label>
+                    <input type="text" id="ab_s1l" placeholder="Années d'études">
+                </div>
+                <div class="form-group">
+                    <label>Stat 2 — Chiffre</label>
+                    <input type="text" id="ab_s2n" placeholder="3+">
+                </div>
+                <div class="form-group">
+                    <label>Stat 2 — Libellé</label>
+                    <input type="text" id="ab_s2l" placeholder="Projets réalisés">
+                </div>
+                <div class="form-group">
+                    <label>Stat 3 — Chiffre</label>
+                    <input type="text" id="ab_s3n" placeholder="4">
+                </div>
+                <div class="form-group">
+                    <label>Stat 3 — Libellé</label>
+                    <input type="text" id="ab_s3l" placeholder="Domaines maîtrisés">
+                </div>
+                <div class="form-group full">
+                    <label>Photo À Propos</label>
+                    <div class="img-uploader" id="aboutImgUploader">
+                        <img id="aboutImgPreview" src="profile1.png" alt="À propos">
+                        <div class="img-uploader-overlay">
+                            <span class="material-icons">upload</span>
+                            <span>Changer la photo</span>
+                            <input type="file" id="aboutImgInput" accept="image/*">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═ SKILLS ═ -->
+        <section class="panel" id="panel-skills">
+            <div class="panel-header">
+                <h2><span class="material-icons">bar_chart</span> Compétences Techniques</h2>
+                <p>Modifiez les 4 cartes de compétences et leurs pourcentages.</p>
+            </div>
+            <div id="skillsEditor"></div>
+        </section>
+
+        <!-- ═ PROJECTS ═ -->
+        <section class="panel" id="panel-projects">
+            <div class="panel-header">
+                <h2><span class="material-icons">work</span> Projets</h2>
+                <p>Modifiez les titres, descriptions, tags et images des projets.</p>
+            </div>
+            <div id="projectsEditor"></div>
+        </section>
+
+        <!-- ═ GALLERY ═ -->
+        <section class="panel" id="panel-gallery">
+            <div class="panel-header">
+                <h2><span class="material-icons">photo_library</span> Galerie Technique</h2>
+                <p>Modifiez les images et légendes de la galerie.</p>
+            </div>
+            <div id="galleryEditor"></div>
+        </section>
+
+        <!-- ═ PPP ═ -->
+        <section class="panel" id="panel-ppp">
+            <div class="panel-header">
+                <h2><span class="material-icons">description</span> Projet Personnel & Professionnel</h2>
+                <p>Modifiez l'introduction et les points clés du PPP.</p>
+            </div>
+            <div class="form-grid">
+                <div class="form-group full">
+                    <label>Introduction</label>
+                    <textarea id="ppp_intro" rows="3"></textarea>
+                </div>
+                <div class="form-group full">
+                    <label>Points clés (un par ligne, 6 maximum)</label>
+                    <textarea id="ppp_highlights" rows="8"></textarea>
+                    <small>Chaque ligne = un point clé affiché dans la grille</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═ CONTACT ═ -->
+        <section class="panel" id="panel-contact">
+            <div class="panel-header">
+                <h2><span class="material-icons">mail</span> Informations de Contact</h2>
+                <p>Modifiez vos coordonnées affichées sur le site.</p>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Adresse email</label>
+                    <input type="email" id="ct_email" placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Numéro de téléphone</label>
+                    <input type="text" id="ct_phone" placeholder="99 98 18 67">
+                </div>
+                <div class="form-group">
+                    <label>Lien href email (avec mailto:)</label>
+                    <input type="text" id="ct_emailhref" placeholder="mailto:votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Lien href téléphone (avec tel:)</label>
+                    <input type="text" id="ct_phonehref" placeholder="tel:+22999981867">
+                </div>
+            </div>
+        </section>
+
+        <!-- ═ PASSWORD ═ -->
+        <section class="panel" id="panel-password">
+            <div class="panel-header">
+                <h2><span class="material-icons">key</span> Changer le Mot de Passe</h2>
+                <p>Modifiez le mot de passe d'accès à ce panneau d'administration.</p>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nouveau mot de passe</label>
+                    <input type="password" id="pw_new" placeholder="Nouveau mot de passe">
+                </div>
+                <div class="form-group">
+                    <label>Confirmer le mot de passe</label>
+                    <input type="password" id="pw_confirm" placeholder="Confirmer">
+                </div>
+                <div class="form-group full">
+                    <button class="btn-primary" id="changePwBtn">
+                        <span class="material-icons">check</span> Mettre à jour le mot de passe
+                    </button>
+                </div>
+                <div class="form-group full info-box">
+                    <span class="material-icons">info</span>
+                    Le mot de passe est sauvegardé localement dans votre navigateur. Si vous changez de navigateur ou d'appareil, utilisez le mot de passe par défaut <code>ve2026</code> ou modifiez la valeur <code>DEFAULT_PW</code> dans <code>admin.js</code>.
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAKPOVI Victorine Emmanuella | Portfolio Mécatronique</title>
-    <meta name="description" content="Portfolio de CAKPOVI Victorine Emmanuella - Étudiante en Génie Mécanique, passionnée de Mécatronique">
+    <meta name="description" content="Portfolio de CAKPOVI Victorine Emmanuella — Étudiante en Génie Mécanique, passionnée de Mécatronique">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,74 +18,130 @@
     <!-- ═══ NAVIGATION ═══ -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">VE.CAKPOVI</div>
-            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+            <div class="logo-mark">
+                <span class="logo-letter">V</span>
+            </div>
+            <span class="logo-text">Victorine Emmanuella</span>
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
+                <span class="material-icons">menu</span>
+            </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Accueil</a></li>
-                <li><a href="#about">A propos</a></li>
+                <li><a href="#about">À Propos</a></li>
                 <li><a href="#skills">Compétences</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#objective">Objectif</a></li>
                 <li><a href="#ppp">PPP</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- ═══ HERO BANNER ═══ -->
-    <section class="hero-banner" id="home">
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="home">
         <canvas id="particles-canvas"></canvas>
-        <div class="hero-orb-1"></div>
-        <div class="hero-orb-2"></div>
+        <div class="hero-grid-pattern"></div>
 
-        <div class="banner-content">
-            <div class="banner-text">
-                <span class="banner-badge">Génie Mécanique & Mécatronique</span>
-                <h1>CAKPOVI<br>Victorine Emmanuella</h1>
-                <p class="banner-typed-wrapper">
-                    <span class="hero-typed" id="typed-text"></span>
+        <!-- Background glows -->
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+
+        <div class="hero-inner">
+            <!-- Left : text -->
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    <span>Disponible pour opportunités</span>
+                </div>
+                <p class="hero-eyebrow">CAKPOVI</p>
+                <h1 class="hero-title">Victorine <span class="hero-title-accent">Emmanuella</span></h1>
+                <p class="hero-typed-line">
+                    <span id="typed-text"></span>
                 </p>
-                <p class="banner-tagline">Concevoir des systèmes intelligents en combinant mécanique, électronique et automatisation.</p>
-                <div class="banner-buttons">
-                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-                    <a href="#contact" class="btn btn-outline">Me contacter</a>
+                <p class="hero-sub">Concevoir des systèmes intelligents à la croisée de la mécanique, de l'électronique et de l'automatisation.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        Voir mes projets
+                        <span class="material-icons">arrow_forward</span>
+                    </a>
+                    <a href="PPP.pdf" download class="btn btn-ghost">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        Télécharger le PPP
+                    </a>
+                </div>
+                <!-- Social sidebar -->
+                <div class="hero-socials">
+                    <a href="#contact" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <div class="socials-line"></div>
                 </div>
             </div>
-            <div class="banner-photo">
-                <div class="banner-photo-frame">
+
+            <!-- Right : portrait photo -->
+            <div class="hero-photo">
+                <div class="hero-photo-glow"></div>
+                <div class="hero-photo-frame">
                     <img src="portrait.jpg" alt="CAKPOVI Victorine Emmanuella">
                 </div>
+                <!-- Floating badge -->
+                <div class="hero-float-badge">
+                    <span class="material-icons">precision_manufacturing</span>
+                    <span>Génie Mécanique</span>
+                </div>
             </div>
         </div>
 
+        <!-- Scroll indicator -->
         <div class="scroll-indicator">
-            <span></span>
-            <span></span>
+            <span class="scroll-label">Découvrir</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
+
+    <!-- ═══ TICKER ═══ -->
+    <div class="ticker-wrap">
+        <div class="ticker-track">
+            <span>SOLIDWORKS</span><span>·</span>
+            <span>MÉCATRONIQUE</span><span>·</span>
+            <span>ROBOTIQUE</span><span>·</span>
+            <span>AUTOMATISATION</span><span>·</span>
+            <span>CAO / CAM</span><span>·</span>
+            <span>SIMULATION</span><span>·</span>
+            <span>MATLAB</span><span>·</span>
+            <span>ARDUINO</span><span>·</span>
+            <span>SOLIDWORKS</span><span>·</span>
+            <span>MÉCATRONIQUE</span><span>·</span>
+            <span>ROBOTIQUE</span><span>·</span>
+            <span>AUTOMATISATION</span><span>·</span>
+            <span>CAO / CAM</span><span>·</span>
+            <span>SIMULATION</span><span>·</span>
+            <span>MATLAB</span><span>·</span>
+            <span>ARDUINO</span><span>·</span>
+        </div>
+    </div>
 
     <!-- ═══ ABOUT ═══ -->
     <section id="about">
         <div class="container">
             <div class="section-header reveal">
-                <h2>A propos</h2>
-                <p>Découvrez mon parcours et ma passion</p>
+                <span class="section-tag">À Propos</span>
+                <h2>Engineer <span class="accent">Spotlight</span></h2>
+                <div class="section-bar"></div>
             </div>
-
             <div class="about-grid">
-                <div class="about-image-wrapper reveal">
-                    <img src="profile1.png" alt="Victorine Emmanuella en contexte académique">
-                </div>
                 <div class="about-text reveal">
                     <p>Je suis étudiante en deuxième année de <strong>Génie Mécanique</strong>, passionnée par la mécatronique et les systèmes automatisés intelligents. Je m'intéresse à la conception mécanique, à la robotique et à l'intégration de composants électroniques dans des systèmes fonctionnels.</p>
                     <p>Je développe mes compétences à travers la <strong>modélisation 3D</strong>, l'analyse de systèmes mécaniques et l'étude des technologies d'automatisation.</p>
                     <p>Mon objectif est de devenir <strong>ingénieure en mécatronique</strong> et de contribuer à l'innovation technologique industrielle.</p>
-
+                    <div class="about-tags">
+                        <span class="about-tag"><span class="material-icons">precision_manufacturing</span>Mechatronics Focus</span>
+                        <span class="about-tag"><span class="material-icons">architecture</span>CAD Design</span>
+                        <span class="about-tag"><span class="material-icons">memory</span>Automatisation</span>
+                    </div>
                     <div class="about-stats">
                         <div class="stat-item">
                             <span class="stat-number">2</span>
-                            <span class="stat-label">Année d'études</span>
+                            <span class="stat-label">Années d'études</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">3+</span>
@@ -96,53 +153,93 @@
                         </div>
                     </div>
                 </div>
+                <div class="about-visual reveal">
+                    <div class="about-img-glow"></div>
+                    <div class="about-img-frame">
+                        <img src="profile1.png" alt="Victorine Emmanuella — contexte académique">
+                        <div class="about-img-overlay">
+                            <div class="about-img-caption">
+                                <span class="caption-tag">Focus Actuel</span>
+                                <p>"Concevoir des systèmes mécatroniques précis pour l'automatisation industrielle."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ═══ SKILLS ═══ -->
-    <section id="skills">
+    <section id="skills" class="section-alt">
         <div class="container">
             <div class="section-header reveal">
-                <h2>Compétences Techniques</h2>
-                <p>Les domaines dans lesquels je me spécialise</p>
+                <span class="section-tag">Expertise</span>
+                <h2>Compétences <span class="accent">Techniques</span></h2>
+                <div class="section-bar"></div>
             </div>
-
-            <div class="skills-hex-grid">
-                <div class="skill-hex reveal">
-                    <div class="skill-hex-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-icon--blue">
+                        <span class="material-icons">view_in_ar</span>
+                    </div>
                     <h3>Conception & CAO</h3>
-                    <ul>
-                        <li>Modélisation 3D</li>
-                        <li>Assemblages mécaniques</li>
-                        <li>Dessin technique</li>
-                    </ul>
+                    <p class="skill-desc">Modélisation et prototypage 3D pour systèmes mécaniques complexes.</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar-label"><span>Modélisation 3D</span><span class="skill-pct">90%</span></div>
+                        <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Dessin tech.</span>
+                        <span>Assemblages</span>
+                    </div>
                 </div>
-                <div class="skill-hex reveal">
-                    <div class="skill-hex-icon"><i class="fa-solid fa-gears"></i></div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-icon--purple">
+                        <span class="material-icons">settings_input_component</span>
+                    </div>
                     <h3>Mécanique</h3>
-                    <ul>
-                        <li>Résistance des matériaux</li>
-                        <li>Cinématique</li>
-                        <li>Transmission de mouvement</li>
-                    </ul>
+                    <p class="skill-desc">Analyse structurelle, résistance des matériaux et cinématique.</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar-label"><span>RDM & Analyse</span><span class="skill-pct">85%</span></div>
+                        <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Statique</span>
+                        <span>Dynamique</span>
+                    </div>
                 </div>
-                <div class="skill-hex reveal">
-                    <div class="skill-hex-icon"><i class="fa-solid fa-microchip"></i></div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-icon--cyan">
+                        <span class="material-icons">memory</span>
+                    </div>
                     <h3>Mécatronique</h3>
-                    <ul>
-                        <li>Capteurs et actionneurs</li>
-                        <li>Systèmes automatisés</li>
-                        <li>Intégration électromécanique</li>
-                    </ul>
+                    <p class="skill-desc">Intégration de capteurs, actionneurs et unités de contrôle électronique.</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar-label"><span>Systèmes automatisés</span><span class="skill-pct">80%</span></div>
+                        <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Arduino</span>
+                        <span>Capteurs</span>
+                    </div>
                 </div>
-                <div class="skill-hex reveal">
-                    <div class="skill-hex-icon"><i class="fa-solid fa-laptop-code"></i></div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon skill-icon--blue">
+                        <span class="material-icons">terminal</span>
+                    </div>
                     <h3>Informatique Technique</h3>
-                    <ul>
-                        <li>Simulation</li>
-                        <li>Outils d'ingénierie</li>
-                    </ul>
+                    <p class="skill-desc">Calcul scientifique et simulation de systèmes pour la vérification ingénierie.</p>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar-label"><span>Simulation</span><span class="skill-pct">75%</span></div>
+                        <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Outils CAE</span>
+                        <span>MATLAB</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,58 +249,69 @@
     <section id="projects">
         <div class="container">
             <div class="section-header reveal">
-                <h2>Projets</h2>
-                <p>Mes réalisations académiques et techniques</p>
+                <span class="section-tag">Sélection</span>
+                <h2>Projets <span class="accent">Récents</span></h2>
+                <div class="section-bar"></div>
             </div>
-
             <div class="projects-grid">
-                <div class="project-3d reveal-3d">
-                    <div class="project-3d-inner">
-                        <div class="project-3d-img">
-                            <img src="gear3d.png" alt="Modélisation 3D d'engrenage">
+
+                <div class="project-card reveal-3d">
+                    <div class="project-img">
+                        <img src="gear3d.png" alt="Modélisation 3D d'engrenage">
+                        <div class="project-overlay">
+                            <span class="material-icons">arrow_outward</span>
                         </div>
-                        <div class="project-3d-body">
-                            <h3>Modélisation 3D d'un système mécanique</h3>
-                            <p>Conception complète d'un mécanisme en CAO avec simulation du mouvement. Modélisation d'engrenage avec précision des dimensions et des tolérances.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">CAO</span>
-                                <span class="project-tag">3D</span>
-                                <span class="project-tag">Simulation</span>
-                            </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>CAD</span>
+                            <span>3D</span>
+                            <span>Simulation</span>
+                        </div>
+                        <h3>Modélisation 3D d'un système mécanique</h3>
+                        <p>Conception complète d'un mécanisme en CAO avec simulation du mouvement. Modélisation d'engrenage avec précision des dimensions et des tolérances.</p>
+                        <div class="project-meta">
+                            <span class="material-icons">history</span> 2024
                         </div>
                     </div>
                 </div>
 
-                <div class="project-3d reveal-3d">
-                    <div class="project-3d-inner">
-                        <div class="project-3d-img">
-                            <img src="project1.jpeg" alt="Système mécatronique">
+                <div class="project-card reveal-3d">
+                    <div class="project-img">
+                        <img src="project1.jpeg" alt="Système mécatronique">
+                        <div class="project-overlay">
+                            <span class="material-icons">arrow_outward</span>
                         </div>
-                        <div class="project-3d-body">
-                            <h3>Analyse d'un système mécatronique</h3>
-                            <p>Étude du fonctionnement d'un système combinant mécanique, électronique et contrôle. Travaux pratiques en automatisation et montage de circuits.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Mécatronique</span>
-                                <span class="project-tag">Électronique</span>
-                                <span class="project-tag">Automatisation</span>
-                            </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>Mécatronique</span>
+                            <span>Électronique</span>
+                        </div>
+                        <h3>Analyse d'un système mécatronique</h3>
+                        <p>Étude du fonctionnement d'un système combinant mécanique, électronique et contrôle. Travaux pratiques en automatisation et montage de circuits.</p>
+                        <div class="project-meta">
+                            <span class="material-icons">history</span> 2024
                         </div>
                     </div>
                 </div>
 
-                <div class="project-3d reveal-3d">
-                    <div class="project-3d-inner">
-                        <div class="project-3d-img">
-                            <img src="projet2.jpeg" alt="Travaux pratiques atelier">
+                <div class="project-card reveal-3d">
+                    <div class="project-img">
+                        <img src="projet2.jpeg" alt="Travaux pratiques atelier">
+                        <div class="project-overlay">
+                            <span class="material-icons">arrow_outward</span>
                         </div>
-                        <div class="project-3d-body">
-                            <h3>Travaux pratiques en atelier mécanique</h3>
-                            <p>Usinage et fabrication de pièces mécaniques sur machine-outil. Maîtrise des techniques de tournage et respect des tolérances dimensionnelles.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Usinage</span>
-                                <span class="project-tag">Tournage</span>
-                                <span class="project-tag">Fabrication</span>
-                            </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>Usinage</span>
+                            <span>Fabrication</span>
+                        </div>
+                        <h3>Travaux pratiques en atelier mécanique</h3>
+                        <p>Usinage et fabrication de pièces mécaniques sur machine-outil. Maîtrise des techniques de tournage et respect des tolérances dimensionnelles.</p>
+                        <div class="project-meta">
+                            <span class="material-icons">history</span> 2023
                         </div>
                     </div>
                 </div>
@@ -212,55 +320,34 @@
     </section>
 
     <!-- ═══ GALLERY ═══ -->
-    <section id="gallery">
+    <section id="gallery" class="section-alt">
         <div class="container">
             <div class="section-header reveal">
-                <h2>Galerie Technique</h2>
-                <p>Univers de la mécatronique et de la robotique</p>
+                <span class="section-tag">Visuels</span>
+                <h2>Galerie <span class="accent">Technique</span></h2>
+                <div class="section-bar"></div>
+                <p>Exploration visuelle des artefacts d'ingénierie et de fabrication.</p>
             </div>
-
-            <div class="gallery-grid">
-                <div class="gallery-card reveal">
-                    <div class="gallery-bg" style="background-image:url('gear3d.png')"></div>
-                    <div class="gallery-info">
-                        <h4>Engrenages & CAO</h4>
-                        <p>Modélisation 3D et simulation</p>
-                    </div>
+            <div class="masonry-grid">
+                <div class="masonry-item reveal">
+                    <img src="gear3d.png" alt="Engrenage 3D">
+                    <div class="masonry-overlay">Engrenages & CAO</div>
                 </div>
-                <div class="gallery-card reveal">
-                    <div class="gallery-bg" style="background-image:url('project1.jpeg')"></div>
-                    <div class="gallery-info">
-                        <h4>Mécatronique</h4>
-                        <p>Circuits et systèmes automatisés</p>
-                    </div>
+                <div class="masonry-item reveal">
+                    <img src="project1.jpeg" alt="Système mécatronique">
+                    <div class="masonry-overlay">Circuits & Systèmes automatisés</div>
                 </div>
-                <div class="gallery-card reveal">
-                    <div class="gallery-bg" style="background-image:url('projet2.jpeg')"></div>
-                    <div class="gallery-info">
-                        <h4>Atelier Mécanique</h4>
-                        <p>Usinage et fabrication</p>
-                    </div>
+                <div class="masonry-item reveal">
+                    <img src="projet2.jpeg" alt="Atelier mécanique">
+                    <div class="masonry-overlay">Usinage & Fabrication</div>
                 </div>
-                <div class="gallery-card reveal">
-                    <div class="gallery-bg" style="background-image:url('profile1.png')"></div>
-                    <div class="gallery-info">
-                        <h4>Formation Académique</h4>
-                        <p>Cours et travaux dirigés</p>
-                    </div>
+                <div class="masonry-item reveal">
+                    <img src="profile1.png" alt="Formation académique">
+                    <div class="masonry-overlay">Formation Académique</div>
                 </div>
-                <div class="gallery-card reveal">
-                    <div class="gallery-bg" style="background-image:url('portrait.jpg')"></div>
-                    <div class="gallery-info">
-                        <h4>Passion & Motivation</h4>
-                        <p>Curiosité et innovation</p>
-                    </div>
-                </div>
-                <div class="gallery-card reveal">
-                    <div class="gallery-bg" style="background-image:url('ppp.png')"></div>
-                    <div class="gallery-info">
-                        <h4>Projet Professionnel</h4>
-                        <p>Vision et plan de carrière</p>
-                    </div>
+                <div class="masonry-item reveal">
+                    <img src="portrait.jpg" alt="Victorine Emmanuella">
+                    <div class="masonry-overlay">Passion & Innovation</div>
                 </div>
             </div>
         </div>
@@ -269,23 +356,36 @@
     <!-- ═══ OBJECTIVE ═══ -->
     <section id="objective">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>Objectif Professionnel</h2>
-            </div>
-            <div class="objective-box reveal">
-                <p>Développer une expertise en mécatronique pour concevoir et optimiser des systèmes automatisés innovants dans la robotique et l'industrie intelligente.</p>
+            <div class="objective-cta reveal">
+                <div class="objective-deco-1"></div>
+                <div class="objective-deco-2"></div>
+                <div class="objective-inner">
+                    <h3>Objectif Professionnel</h3>
+                    <p>Développer une expertise en mécatronique pour concevoir et optimiser des systèmes automatisés innovants dans la robotique et l'industrie intelligente.</p>
+                    <p class="objective-sub">Je suis actuellement ouverte aux opportunités de stage et aux projets techniques dans le domaine de la mécatronique et de l'automatisation.</p>
+                    <div class="objective-actions">
+                        <a href="mailto:cakpovivictorine@gmail.com" class="btn btn-white">
+                            <span class="material-icons">mail</span>
+                            Me contacter
+                        </a>
+                        <a href="PPP.pdf" download class="btn btn-outline-white">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Télécharger le PPP
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ═══ PPP ═══ -->
-    <section id="ppp">
+    <section id="ppp" class="section-alt">
         <div class="container">
             <div class="section-header reveal">
-                <h2>Projet Personnel & Professionnel</h2>
-                <p>Ma vision et mon plan de carrière en mécatronique</p>
+                <span class="section-tag">PPP</span>
+                <h2>Projet Personnel & <span class="accent">Professionnel</span></h2>
+                <div class="section-bar"></div>
             </div>
-
             <div class="ppp-content reveal">
                 <div class="ppp-text">
                     <h3>Mon PPP en bref</h3>
@@ -316,7 +416,84 @@
                             <span>Organisation des postes de travail en atelier</span>
                         </div>
                     </div>
-                    <a href="PPP.pdf" download class="ppp-download"><i class="fa-solid fa-file-pdf"></i> Télécharger le PPP (PDF)</a>
+                    <a href="PPP.pdf" download class="btn btn-primary" style="margin-top:2rem;display:inline-flex;">
+                        <i class="fa-solid fa-file-pdf"></i> Télécharger le PPP (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Contact</span>
+                <h2>Entrer en <span class="accent">Contact</span></h2>
+                <div class="section-bar"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-card reveal">
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nom complet</label>
+                                <input type="text" id="name" placeholder="Votre nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="votre@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" placeholder="Objet de votre message">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Décrivez votre projet ou demande..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                            Envoyer le message
+                            <span class="material-icons">send</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info reveal">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <span class="material-icons">mail</span>
+                        </div>
+                        <div>
+                            <span class="contact-info-label">Email</span>
+                            <a href="mailto:cakpovivictorine@gmail.com">cakpovivictorine@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <span class="material-icons">call</span>
+                        </div>
+                        <div>
+                            <span class="contact-info-label">Téléphone</span>
+                            <a href="tel:+22999981867">99 98 18 67</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-ppp-card">
+                        <div class="contact-ppp-deco">
+                            <span class="material-icons">engineering</span>
+                        </div>
+                        <div class="contact-ppp-body">
+                            <h4>Voir mon profil complet</h4>
+                            <p>Consultez mon parcours académique, mes compétences et mes certifications en mécatronique.</p>
+                            <a href="PPP.pdf" download class="btn btn-white" style="margin-top:1.5rem;">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                Télécharger le PPP (PDF)
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -328,71 +505,35 @@
         <img id="lightbox-img" src="" alt="PPP">
     </div>
 
-    <!-- ═══ CONTACT ═══ -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Contact</h2>
-                <p>N'hésitez pas à me contacter</p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-cards reveal">
-                    <div class="contact-card">
-                        <div class="contact-card-icon"><i class="fa-solid fa-user"></i></div>
-                        <div>
-                            <h4>Nom</h4>
-                            <p>CAKPOVI Victorine Emmanuella</p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
-                        <div>
-                            <h4>Email</h4>
-                            <p><a href="mailto:cakpovivictorine@gmail.com">cakpovivictorine@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
-                        <div>
-                            <h4>Téléphone</h4>
-                            <p><a href="tel:+22999981867">99 98 18 67</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form-wrapper reveal" onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">Nom complet</label>
-                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">ENVOYER</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- ═══ FOOTER ═══ -->
     <footer>
-        <div class="footer-logo">VE.CAKPOVI</div>
-        <div class="footer-links">
-            <a href="#home">Accueil</a>
-            <a href="#about">A propos</a>
-            <a href="#skills">Compétences</a>
-            <a href="#projects">Projets</a>
-            <a href="#ppp">PPP</a>
-            <a href="#contact">Contact</a>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo-mark"><span class="logo-letter">V</span></div>
+                <div>
+                    <span class="footer-name">Victorine <span class="accent">E.</span></span>
+                    <p>Concevoir l'avenir par la synergie de la mécanique et de l'électronique.</p>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <span class="footer-nav-title">Navigation</span>
+                <a href="#home">Accueil</a>
+                <a href="#about">À Propos</a>
+                <a href="#projects">Projets</a>
+                <a href="#ppp">PPP</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-socials">
+                    <a href="mailto:cakpovivictorine@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
         </div>
-        <a href="PPP.pdf" download class="cv-btn"><i class="fa-solid fa-file-pdf"></i> Télécharger mon PPP</a>
-        <p style="margin-top:1.5rem;">&copy; 2026 CAKPOVI Victorine Emmanuella &mdash; Portfolio Ingénierie Mécatronique</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Victorine Emmanuella CAKPOVI — Portfolio Ingénierie Mécatronique</p>
+            <p>Built with Engineering Precision &nbsp;·&nbsp; <a href="admin.html" class="admin-link" title="Administration">&#9881;</a></p>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
