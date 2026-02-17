@@ -194,6 +194,36 @@ body { font-family:var(--font); background:var(--bg); color:var(--text); height:
 }
 .info-box .material-icons { color:var(--primary); font-size:1.1rem; flex-shrink:0; margin-top:.1rem; }
 
+/* ── Publish button ── */
+.btn-publish {
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.7rem 1.4rem; width:100%; justify-content:center;
+    background: linear-gradient(135deg, #1152d4, #7C3AED);
+    color:#fff; border:none; border-radius:var(--radius);
+    font-family:var(--font); font-weight:700; font-size:.85rem;
+    cursor:pointer; transition:all .2s;
+    box-shadow: 0 0 20px rgba(17,82,212,.25);
+}
+.btn-publish:hover { transform:translateY(-2px); box-shadow: 0 0 30px rgba(17,82,212,.5); }
+.btn-publish .material-icons { font-size:.95rem; }
+.btn-publish:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+
+/* ── Publish progress ── */
+.publish-status {
+    padding:1rem 1.2rem; background:var(--bg-card);
+    border:1px solid var(--border); border-radius:var(--radius-lg);
+}
+.publish-progress {
+    width:100%; height:4px; background:rgba(255,255,255,.06);
+    border-radius:99px; overflow:hidden; margin-bottom:.7rem;
+}
+.publish-progress-bar {
+    height:100%; width:0%;
+    background: linear-gradient(90deg, #1152d4, #7C3AED);
+    border-radius:99px; transition:width .4s ease;
+}
+#publishStatusText { font-size:.82rem; color:var(--text-dim); }
+
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width:6px; }
 ::-webkit-scrollbar-track { background:transparent; }

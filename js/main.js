@@ -3,12 +3,10 @@
    CAKPOVI Victorine Emmanuella
    ══════════════════════════════════════════ */
 
-/* ── Apply Admin Overrides from localStorage ── */
+/* ── Apply Admin Content (portfolio-data.json → localStorage fallback) ── */
 (function applyContent() {
-    var raw = localStorage.getItem('portfolioData');
-    if (!raw) return;
-    var d;
-    try { d = JSON.parse(raw); } catch(e) { return; }
+    function run(d) {
+        if (!d) return;
 
     function q(sel) { return document.querySelector(sel); }
     function qa(sel) { return document.querySelectorAll(sel); }
@@ -127,6 +125,16 @@
         if (infoAs[0]) { infoAs[0].textContent = ct.email; if (ct.emailhref) infoAs[0].href = ct.emailhref; }
         if (infoAs[1]) { infoAs[1].textContent = ct.phone; if (ct.phonehref) infoAs[1].href = ct.phonehref; }
     }
+    } // end run()
+
+    // 1. Try fetching published portfolio-data.json (visitors on GitHub Pages)
+    fetch('portfolio-data.json?t=' + Date.now())
+        .then(function(r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(function(d) { run(d); })
+        .catch(function() {
+            // 2. Fallback: localStorage (local admin preview)
+            try { run(JSON.parse(localStorage.getItem('portfolioData'))); } catch(e) {}
+        });
 })();
 
 /* ── Mobile Menu ── */

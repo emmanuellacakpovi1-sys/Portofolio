@@ -65,10 +65,16 @@
             <button class="nav-item" data-section="password">
                 <span class="material-icons">key</span> Mot de passe
             </button>
+            <button class="nav-item" data-section="github">
+                <span class="material-icons">cloud_upload</span> Publication GitHub
+            </button>
         </nav>
         <div class="sidebar-actions">
             <button class="btn-primary full" id="saveAllBtn">
-                <span class="material-icons">save</span> Sauvegarder tout
+                <span class="material-icons">save</span> Sauvegarder
+            </button>
+            <button class="btn-publish full" id="publishBtn">
+                <span class="material-icons">rocket_launch</span> Publier sur GitHub
             </button>
             <button class="btn-danger full" id="resetAllBtn">
                 <span class="material-icons">restore</span> Réinitialiser
@@ -286,6 +292,68 @@
                 <div class="form-group full info-box">
                     <span class="material-icons">info</span>
                     Le mot de passe est sauvegardé localement dans votre navigateur. Si vous changez de navigateur ou d'appareil, utilisez le mot de passe par défaut <code>ve2026</code> ou modifiez la valeur <code>DEFAULT_PW</code> dans <code>admin.js</code>.
+                </div>
+            </div>
+        </section>
+
+        <!-- ═ GITHUB ═ -->
+        <section class="panel" id="panel-github">
+            <div class="panel-header">
+                <h2><span class="material-icons">cloud_upload</span> Publication GitHub</h2>
+                <p>Configurez votre token GitHub pour publier vos modifications directement sur le site en ligne.</p>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nom d'utilisateur GitHub</label>
+                    <input type="text" id="gh_user" placeholder="ex: emmanuellacakpovi1-sys">
+                </div>
+                <div class="form-group">
+                    <label>Nom du dépôt</label>
+                    <input type="text" id="gh_repo" placeholder="ex: Portofolio">
+                </div>
+                <div class="form-group">
+                    <label>Branche</label>
+                    <input type="text" id="gh_branch" placeholder="main">
+                </div>
+                <div class="form-group">
+                    <label>Token personnel GitHub (PAT)</label>
+                    <input type="password" id="gh_token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+                </div>
+                <div class="form-group full">
+                    <button class="btn-primary" id="saveGhBtn">
+                        <span class="material-icons">save</span> Enregistrer les paramètres GitHub
+                    </button>
+                </div>
+
+                <div class="form-group full" style="margin-top:1rem;">
+                    <div class="publish-status" id="publishStatus" style="display:none">
+                        <div class="publish-progress">
+                            <div class="publish-progress-bar" id="publishBar"></div>
+                        </div>
+                        <p id="publishStatusText">Initialisation...</p>
+                    </div>
+                </div>
+
+                <div class="form-group full info-box">
+                    <span class="material-icons">info</span>
+                    <div>
+                        <strong>Comment obtenir un token GitHub (PAT) :</strong><br>
+                        1. Va sur <code>github.com → Settings → Developer settings → Personal access tokens → Tokens (classic)</code><br>
+                        2. Clique <code>Generate new token (classic)</code><br>
+                        3. Coche la permission <code>repo</code> (accès complet au dépôt)<br>
+                        4. Copie le token généré et colle-le ici.<br><br>
+                        ⚠ Le token est sauvegardé <strong>uniquement dans ton navigateur</strong>, jamais dans le code publié.
+                    </div>
+                </div>
+                <div class="form-group full info-box" style="border-color:rgba(63,185,80,.3);background:rgba(63,185,80,.05);">
+                    <span class="material-icons" style="color:#3FB950;">check_circle</span>
+                    <div>
+                        <strong>Comment fonctionne la publication :</strong><br>
+                        Lorsque tu cliques <strong>Publier sur GitHub</strong>, l'admin :<br>
+                        1. Uploade les nouvelles images dans le dossier <code>uploads/</code> du repo<br>
+                        2. Met à jour le fichier <code>portfolio-data.json</code> dans le repo<br>
+                        3. GitHub Pages redéploie automatiquement → visible en <strong>~2 minutes</strong>
+                    </div>
                 </div>
             </div>
         </section>
