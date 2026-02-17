@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "eyebrow": "CAKPOVI",
+    "firstName": "Victorine",
+    "lastName": "Emmanuella",
+    "badge": "Disponible pour opportunités",
+    "tagline": "Concevoir des systèmes intelligents à la croisée de la mécanique, de l'électronique et de l'automatisation.",
+    "phrases": "Étudiante en Génie Mécanique\nPassionnée de Mécatronique\nFuture Ingénieure en Robotique\nConception & Automatisation",
+    "photo": "uploads/hero-portrait.jpg"
+  },
+  "about": {
+    "p1": "Je suis étudiante en deuxième année de <strong>Génie Mécanique</strong>, passionnée par la mécatronique et les systèmes automatisés intelligents.",
+    "p2": "Je développe mes compétences à travers la <strong>modélisation 3D</strong>, l'analyse de systèmes mécaniques et l'étude des technologies d'automatisation.",
+    "p3": "Mon objectif est de devenir <strong>ingénieure en mécatronique</strong> et de contribuer à l'innovation technologique industrielle.",
+    "s1n": "2",
+    "s1l": "Années d'études",
+    "s2n": "3+",
+    "s2l": "Projets réalisés",
+    "s3n": "4",
+    "s3l": "Domaines maîtrisés",
+    "photo": null
+  },
+  "skills": [
+    {
+      "title": "Conception & CAO",
+      "desc": "Modélisation et prototypage 3D pour systèmes mécaniques complexes.",
+      "bar": "90",
+      "tags": "Dessin tech., Assemblages"
+    },
+    {
+      "title": "Mécanique",
+      "desc": "Analyse structurelle, résistance des matériaux et cinématique.",
+      "bar": "85",
+      "tags": "Statique, Dynamique"
+    },
+    {
+      "title": "Mécatronique",
+      "desc": "Intégration de capteurs, actionneurs et unités de contrôle électronique.",
+      "bar": "80",
+      "tags": "Arduino, Capteurs"
+    },
+    {
+      "title": "Informatique Technique",
+      "desc": "Calcul scientifique et simulation de systèmes.",
+      "bar": "75",
+      "tags": "Outils CAE, MATLAB"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Modélisation 3D d'un système mécanique",
+      "desc": "Conception complète d'un mécanisme en CAO avec simulation du mouvement.",
+      "tags": "CAD, 3D, Simulation",
+      "year": "2024",
+      "image": null
+    },
+    {
+      "title": "Analyse d'un système mécatronique",
+      "desc": "Étude du fonctionnement d'un système combinant mécanique, électronique et contrôle.",
+      "tags": "Mécatronique, Électronique",
+      "year": "2024",
+      "image": null
+    },
+    {
+      "title": "Travaux pratiques en atelier mécanique",
+      "desc": "Usinage et fabrication de pièces mécaniques sur machine-outil.",
+      "tags": "Usinage, Fabrication",
+      "year": "2023",
+      "image": null
+    }
+  ],
+  "gallery": [
+    {
+      "label": "Engrenages & CAO",
+      "sublabel": "Modélisation 3D et simulation",
+      "image": null
+    },
+    {
+      "label": "Mécatronique",
+      "sublabel": "Circuits et systèmes automatisés",
+      "image": null
+    },
+    {
+      "label": "Atelier Mécanique",
+      "sublabel": "Usinage et fabrication",
+      "image": null
+    },
+    {
+      "label": "Formation Académique",
+      "sublabel": "Cours et travaux dirigés",
+      "image": null
+    },
+    {
+      "label": "Passion & Innovation",
+      "sublabel": "Curiosité et innovation",
+      "image": null
+    }
+  ],
+  "ppp": {
+    "intro": "Mon projet personnel et professionnel est orienté vers une carrière dans le domaine de la <strong>mécatronique</strong> et de l'ingénierie industrielle.",
+    "highlights": "Conception et interprétation de plans techniques\nAnalyse des systèmes mécatroniques\nOptimisation des flux de production\nNotions de Lean manufacturing\nBases de l'automatisation industrielle\nOrganisation des postes de travail en atelier"
+  },
+  "contact": {
+    "email": "cakpovivictorine@gmail.com",
+    "phone": "99 98 18 67",
+    "emailhref": "mailto:cakpovivictorine@gmail.com",
+    "phonehref": "tel:+22999981867"
+  }
+}
